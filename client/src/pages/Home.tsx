@@ -162,10 +162,8 @@ export default function Home() {
           <p className="text-lg mb-8 text-primary-foreground/90">
             Get a free, no-obligation quote from our experienced team today.
           </p>
-          <Link href="/contact#quote-form">
-            <a className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-muted transition-colors no-underline">
-              Get Your Free Quote Now
-            </a>
+          <Link href="/contact#quote-form" className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-muted transition-colors no-underline">
+            Get Your Free Quote Now
           </Link>
         </div>
       </section>
