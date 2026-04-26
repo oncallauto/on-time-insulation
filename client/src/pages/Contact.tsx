@@ -216,6 +216,7 @@ export default function Contact() {
                     <option value="removal">Removal</option>
                     <option value="installation">Installation</option>
                     <option value="replacement">Replacement</option>
+                    <option value="roof-vents">Roof Vents & Whirlybirds</option>
                     <option value="other">Other</option>
                   </select>
                 </div>

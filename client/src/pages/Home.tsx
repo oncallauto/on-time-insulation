@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import Layout from "@/components/Layout";
-import { ArrowRight, CheckCircle, Shield, Zap, Award } from "lucide-react";
+import { ArrowRight, CheckCircle, Shield, Zap, Award, Wind } from "lucide-react";
 
 export default function Home() {
   const services = [
@@ -18,6 +18,11 @@ export default function Home() {
       icon: <Award className="w-8 h-8" />,
       title: "Replacement",
       description: "Remove and upgrade insulation to improve energy efficiency",
+    },
+    {
+      icon: <Wind className="w-8 h-8" />,
+      title: "Roof Vents & Whirlybirds",
+      description: "Solar powered vents and turbine ventilation for energy efficiency",
     },
     {
       icon: <CheckCircle className="w-8 h-8" />,

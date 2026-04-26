@@ -12,6 +12,7 @@ import NewHomes from "./pages/NewHomes";
 import OldHomes from "./pages/OldHomes";
 import Hazards from "./pages/Hazards";
 import Benefits from "./pages/Benefits";
+import RoofVents from "./pages/RoofVents";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
       <Route path={"/old-homes"} component={OldHomes} />
       <Route path={"/hazards"} component={Hazards} />
       <Route path={"/benefits"} component={Benefits} />
+      <Route path={"/roof-vents"} component={RoofVents} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

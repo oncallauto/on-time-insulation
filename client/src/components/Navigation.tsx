@@ -12,6 +12,7 @@ export default function Navigation() {
     { label: "About Us", href: "/about" },
     { label: "New Homes", href: "/new-homes" },
     { label: "Old Homes", href: "/old-homes" },
+    { label: "Roof Vents", href: "/roof-vents" },
     { label: "Hazards & Safety", href: "/hazards" },
     { label: "Benefits", href: "/benefits" },
     { label: "Contact", href: "/contact" },

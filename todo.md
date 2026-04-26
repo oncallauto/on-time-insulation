@@ -43,3 +43,13 @@ All features have been successfully implemented and tested. The website includes
 - [x] Vitest unit tests for quote form and calculator (19 tests passing)
 - [x] Browser testing on mobile and desktop
 - [x] Final checkpoint and project delivery
+
+
+## New Feature: Solar Powered Roof Vents & Whirlybirds
+- [x] Create dedicated Roof Vents page with service details
+- [x] Add solar powered roof vents and whirlybirds to service cards
+- [x] Update Services page to include roof vents option
+- [x] Update Home page services overview to include roof vents
+- [x] Add roof vents to quote form service type options
+- [x] Update navigation to include Roof Vents link
+- [x] Test all features and create final checkpoint

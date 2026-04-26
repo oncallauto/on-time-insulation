@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout";
-import { CheckCircle, Zap, Shield, Award, Wrench } from "lucide-react";
+import { CheckCircle, Zap, Shield, Award, Wrench, Wind } from "lucide-react";
 
 export default function Services() {
   const serviceCategories = [
@@ -39,6 +39,19 @@ export default function Services() {
         "Improve thermal performance",
         "Reduce energy costs",
         "Increase comfort levels",
+      ],
+    },
+    {
+      icon: <Wind className="w-12 h-12" />,
+      title: "Roof Vents & Whirlybirds",
+      description: "Professional installation of solar powered vents and turbine ventilation systems",
+      features: [
+        "Solar powered roof vents",
+        "Whirlybird turbine installation",
+        "Energy-efficient ventilation",
+        "Moisture and humidity control",
+        "Temperature regulation",
+        "Roof protection and longevity",
       ],
     },
     {
