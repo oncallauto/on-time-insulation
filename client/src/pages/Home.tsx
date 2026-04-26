@@ -73,17 +73,13 @@ export default function Home() {
             Safe, clean, energy-efficient solutions for homes and businesses. On Time, Every Time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact#quote-form">
-              <a className="btn-primary no-underline inline-flex items-center justify-center gap-2">
-                Get Free Quote
-                <ArrowRight size={20} />
-              </a>
+            <Link href="/contact#quote-form" className="btn-primary no-underline inline-flex items-center justify-center gap-2">
+              Get Free Quote
+              <ArrowRight size={20} />
             </Link>
-            <Link href="#services">
-              <a className="btn-outline no-underline inline-flex items-center justify-center gap-2">
-                Learn More
-                <ArrowRight size={20} />
-              </a>
+            <Link href="#services" className="btn-outline no-underline inline-flex items-center justify-center gap-2">
+              Learn More
+              <ArrowRight size={20} />
             </Link>
           </div>
         </div>
@@ -123,11 +119,9 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/services">
-              <a className="btn-secondary no-underline inline-flex items-center gap-2">
-                View All Services
-                <ArrowRight size={20} />
-              </a>
+            <Link href="/services" className="btn-secondary no-underline inline-flex items-center gap-2">
+              View All Services
+              <ArrowRight size={20} />
             </Link>
           </div>
         </div>

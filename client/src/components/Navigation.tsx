@@ -21,35 +21,29 @@ export default function Navigation() {
     <nav className="sticky-header">
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
-        <Link href="/">
-          <a className="flex items-center gap-2 no-underline">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">OTI</span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="font-bold text-foreground text-lg">On Time Insulation</p>
-              <p className="text-xs text-muted-foreground">Brisbane, Australia</p>
-            </div>
-          </a>
+        <Link href="/" className="flex items-center gap-2 no-underline">
+          <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+            <span className="text-white font-bold text-lg">OTI</span>
+          </div>
+          <div className="hidden sm:block">
+            <p className="font-bold text-foreground text-lg">On Time Insulation</p>
+            <p className="text-xs text-muted-foreground">Brisbane, Australia</p>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
-            <Link key={link.href} href={link.href}>
-              <a className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors no-underline">
-                {link.label}
-              </a>
+            <Link key={link.href} href={link.href} className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors no-underline">
+              {link.label}
             </Link>
           ))}
         </div>
 
         {/* CTA Button & Mobile Menu */}
         <div className="flex items-center gap-4">
-          <Link href="/contact#quote-form">
-            <a className="hidden md:inline-block btn-primary no-underline">
-              Get Free Quote
-            </a>
+          <Link href="/contact#quote-form" className="hidden md:inline-block btn-primary no-underline">
+            Get Free Quote
           </Link>
 
           {/* Mobile Menu Button */}
@@ -68,22 +62,21 @@ export default function Navigation() {
         <div className="lg:hidden border-t border-border bg-muted/50">
           <div className="container py-4 space-y-2">
             {navLinks.map((link) => (
-              <Link key={link.href} href={link.href}>
-                <a
-                  className="block px-3 py-2 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors no-underline"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
-              </Link>
-            ))}
-            <Link href="/contact#quote-form">
-              <a
-                className="block btn-primary text-center mt-4 no-underline"
+              <Link
+                key={link.href}
+                href={link.href}
+                className="block px-3 py-2 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors no-underline"
                 onClick={() => setIsOpen(false)}
               >
-                Get Free Quote
-              </a>
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="/contact#quote-form"
+              className="block btn-primary text-center mt-4 no-underline"
+              onClick={() => setIsOpen(false)}
+            >
+              Get Free Quote
             </Link>
           </div>
         </div>
