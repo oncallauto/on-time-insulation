@@ -25,4 +25,21 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Quote submissions table for storing customer quote requests
+ */
+export const quoteSubmissions = mysqlTable("quote_submissions", {
+  id: int("id").autoincrement().primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  phone: varchar("phone", { length: 20 }).notNull(),
+  email: varchar("email", { length: 320 }).notNull(),
+  suburb: varchar("suburb", { length: 255 }).notNull(),
+  propertyType: mysqlEnum("propertyType", ["new", "old", "commercial"]).notNull(),
+  serviceType: mysqlEnum("serviceType", ["removal", "installation", "replacement", "other"]).notNull(),
+  message: text("message"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type QuoteSubmission = typeof quoteSubmissions.$inferSelect;
+export type InsertQuoteSubmission = typeof quoteSubmissions.$inferInsert;

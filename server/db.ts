@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, InsertQuoteSubmission, quoteSubmissions, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -89,4 +89,40 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// TODO: add feature queries here as your schema grows.
+/**
+ * Create a new quote submission
+ */
+export async function createQuoteSubmission(submission: InsertQuoteSubmission) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.insert(quoteSubmissions).values(submission);
+  return result;
+}
+
+/**
+ * Get all quote submissions (for admin)
+ */
+export async function getAllQuoteSubmissions() {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  return await db.select().from(quoteSubmissions).orderBy(quoteSubmissions.createdAt);
+}
+
+/**
+ * Get a specific quote submission by ID
+ */
+export async function getQuoteSubmissionById(id: number) {
+  const db = await getDb();
+  if (!db) {
+    throw new Error("Database not available");
+  }
+
+  const result = await db.select().from(quoteSubmissions).where(eq(quoteSubmissions.id, id)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}

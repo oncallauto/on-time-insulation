@@ -1,0 +1,93 @@
+import { useState } from "react";
+import { Link } from "wouter";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+export default function Navigation() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/services" },
+    { label: "About Us", href: "/about" },
+    { label: "New Homes", href: "/new-homes" },
+    { label: "Old Homes", href: "/old-homes" },
+    { label: "Hazards & Safety", href: "/hazards" },
+    { label: "Benefits", href: "/benefits" },
+    { label: "Contact", href: "/contact" },
+  ];
+
+  return (
+    <nav className="sticky-header">
+      <div className="container flex items-center justify-between py-4">
+        {/* Logo */}
+        <Link href="/">
+          <a className="flex items-center gap-2 no-underline">
+            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">OTI</span>
+            </div>
+            <div className="hidden sm:block">
+              <p className="font-bold text-foreground text-lg">On Time Insulation</p>
+              <p className="text-xs text-muted-foreground">Brisbane, Australia</p>
+            </div>
+          </a>
+        </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-1">
+          {navLinks.map((link) => (
+            <Link key={link.href} href={link.href}>
+              <a className="px-3 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors no-underline">
+                {link.label}
+              </a>
+            </Link>
+          ))}
+        </div>
+
+        {/* CTA Button & Mobile Menu */}
+        <div className="flex items-center gap-4">
+          <Link href="/contact#quote-form">
+            <a className="hidden md:inline-block btn-primary no-underline">
+              Get Free Quote
+            </a>
+          </Link>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 hover:bg-muted rounded-lg transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="lg:hidden border-t border-border bg-muted/50">
+          <div className="container py-4 space-y-2">
+            {navLinks.map((link) => (
+              <Link key={link.href} href={link.href}>
+                <a
+                  className="block px-3 py-2 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors no-underline"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </a>
+              </Link>
+            ))}
+            <Link href="/contact#quote-form">
+              <a
+                className="block btn-primary text-center mt-4 no-underline"
+                onClick={() => setIsOpen(false)}
+              >
+                Get Free Quote
+              </a>
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
+  );
+}
