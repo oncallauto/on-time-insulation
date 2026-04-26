@@ -130,9 +130,9 @@ export default function Benefits() {
 
       {/* Energy Efficiency Infographic */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container max-w-4xl">
           <div className="mb-12">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/benefits-energy-8i2feNMtRT34X8pXsbqent.webp" alt="Insulation Benefits Infographic" className="w-full rounded-lg shadow-lg" />
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/benefits-energy-8i2feNMtRT34X8pXsbqent.webp" alt="Insulation Benefits Infographic" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
         </div>
       </section>

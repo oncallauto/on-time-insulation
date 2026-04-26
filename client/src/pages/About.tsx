@@ -94,9 +94,9 @@ export default function About() {
 
       {/* Team Image */}
       <section className="section-padding">
-        <div className="container">
+        <div className="container max-w-4xl">
           <div className="mb-12">
-            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/about-team-LRyuoXkQyx9Nb2saRF3wA3.webp" alt="On Time Insulation Team" className="w-full rounded-lg shadow-lg" />
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/about-team-LRyuoXkQyx9Nb2saRF3wA3.webp" alt="On Time Insulation Team" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
         </div>
       </section>
