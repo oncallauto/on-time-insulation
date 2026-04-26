@@ -12,9 +12,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">OTI</span>
-              </div>
+              <img src="/manus-storage/oti-logo_527d542b.webp" alt="On Time Insulation" className="h-10 w-auto" />
               <h3 className="font-bold text-lg">On Time Insulation</h3>
             </div>
             <p className="text-sm text-background/80">
@@ -81,14 +79,14 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Phone size={18} className="flex-shrink-0" />
-                <a href="tel:+61733333333" className="hover:text-primary transition-colors no-underline">
-                  (07) 3333 3333
+                <a href="tel:+61487720783" className="hover:text-primary transition-colors no-underline">
+                  0487 720 783
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="flex-shrink-0" />
-                <a href="mailto:info@ontimeinsulation.com.au" className="hover:text-primary transition-colors no-underline">
-                  info@ontimeinsulation.com.au
+                <a href="mailto:timeinsulation786@gmail.com" className="hover:text-primary transition-colors no-underline">
+                  timeinsulation786@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -105,8 +103,8 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/70">
           <div className="space-y-1">
-            <p>ABN: 12 345 678 901</p>
-            <p>Licence: QLD Insulation Contractors Licence #IC123456</p>
+            <p>ABN: 36 689 436 342</p>
+            <p>Licence: QLD Insulation Contractors Licence</p>
           </div>
           <p>
             © {currentYear} On Time Insulation. All rights reserved.

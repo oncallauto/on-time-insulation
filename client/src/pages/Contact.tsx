@@ -115,15 +115,15 @@ export default function Contact() {
             <div className="service-card text-center">
               <Phone className="w-8 h-8 text-primary mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2 text-foreground">Phone</h3>
-              <a href="tel:+61733333333" className="text-primary hover:text-accent transition-colors">
-                (07) 3333 3333
+              <a href="tel:+61487720783" className="text-primary hover:text-accent transition-colors">
+                0487 720 783
               </a>
             </div>
             <div className="service-card text-center">
               <Mail className="w-8 h-8 text-primary mx-auto mb-4" />
               <h3 className="text-lg font-bold mb-2 text-foreground">Email</h3>
-              <a href="mailto:info@ontimeinsulation.com.au" className="text-primary hover:text-accent transition-colors">
-                info@ontimeinsulation.com.au
+              <a href="mailto:timeinsulation786@gmail.com" className="text-primary hover:text-accent transition-colors">
+                timeinsulation786@gmail.com
               </a>
             </div>
             <div className="service-card text-center">

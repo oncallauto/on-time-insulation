@@ -53,3 +53,12 @@ All features have been successfully implemented and tested. The website includes
 - [x] Add roof vents to quote form service type options
 - [x] Update navigation to include Roof Vents link
 - [x] Test all features and create final checkpoint
+
+
+## Business Details & Branding Update
+- [x] Upload and integrate professional On Time Insulation logo
+- [x] Update Navigation component with logo
+- [x] Update Footer with logo, email (timeinsulation786@gmail.com), phone (0487 720 783), and ABN (36 689 436 342)
+- [x] Update Contact page with business phone and email
+- [x] Verify all tests pass (19/19 passing)
+- [x] Create final checkpoint with all business details
