@@ -118,10 +118,14 @@ export default function Services() {
                     ))}
                   </ul>
                 </div>
-                <div className={`bg-muted/50 rounded-lg p-8 h-64 flex items-center justify-center ${idx % 2 === 1 ? "md:order-1" : ""}`}>
-                  <div className="text-center text-muted-foreground">
-                    <p className="text-sm">Professional service image</p>
-                  </div>
+                <div className={`bg-muted/50 rounded-lg overflow-hidden h-64 flex items-center justify-center ${idx % 2 === 1 ? "md:order-1" : ""}`}>
+                  <img src={[
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-removal-ahb8UQxcQYtcVyXFNNxg69.webp',
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-installation-aZsKbTJhBmFKBwyvmvDpTM.webp',
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-roof-vents-g7jHiHEb8hmneVFV2er5ko.webp',
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-roof-vents-g7jHiHEb8hmneVFV2er5ko.webp',
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-installation-aZsKbTJhBmFKBwyvmvDpTM.webp'
+                  ][idx]} alt={category.title} className="w-full h-full object-cover" />
                 </div>
               </div>
             ))}

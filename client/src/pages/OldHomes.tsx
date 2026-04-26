@@ -65,6 +65,15 @@ export default function OldHomes() {
         </div>
       </section>
 
+      {/* Featured Image */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="mb-12">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/old-homes-renovation-5rTanmHqJueFSzPm3VtpQH.webp" alt="Old Home Insulation Renovation" className="w-full rounded-lg shadow-lg" />
+          </div>
+        </div>
+      </section>
+
       {/* Overview */}
       <section className="section-padding">
         <div className="container max-w-3xl">

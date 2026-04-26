@@ -23,7 +23,7 @@ export default function Navigation() {
       <div className="container flex items-center justify-between py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 no-underline">
-          <img src="/manus-storage/oti-logo_527d542b.webp" alt="On Time Insulation" className="h-12 w-auto" />
+          <img src="/manus-storage/oti-logo_527d542b.webp" alt="On Time Insulation" className="h-16 w-auto" />
           <div className="hidden sm:block">
             <p className="font-bold text-foreground text-sm">On Time Insulation</p>
             <p className="text-xs text-muted-foreground">Brisbane, Australia</p>

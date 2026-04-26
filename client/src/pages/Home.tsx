@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="hero-section bg-gradient-to-r from-primary/10 to-accent/10">
+      <section className="hero-section bg-gradient-to-r from-primary/10 to-accent/10 relative overflow-hidden" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/hero-insulation-MBUSPijzfTsJEUjPZZaSCw.webp)', backgroundSize: 'cover', backgroundPosition: 'center'}}>
         <div className="hero-overlay" />
         <div className="container relative z-10 text-center max-w-3xl">
           <div className="mb-6 inline-block">

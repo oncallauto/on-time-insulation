@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <img src="/manus-storage/oti-logo_527d542b.webp" alt="On Time Insulation" className="h-10 w-auto" />
+              <img src="/manus-storage/oti-logo_527d542b.webp" alt="On Time Insulation" className="h-14 w-auto" />
               <h3 className="font-bold text-lg">On Time Insulation</h3>
             </div>
             <p className="text-sm text-background/80">

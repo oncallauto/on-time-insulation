@@ -116,6 +116,15 @@ export default function RoofVents() {
         </div>
       </section>
 
+      {/* Featured Image */}
+      <section className="section-padding">
+        <div className="container">
+          <div className="mb-12">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-roof-vents-g7jHiHEb8hmneVFV2er5ko.webp" alt="Solar Powered Roof Vents and Whirlybirds" className="w-full rounded-lg shadow-lg" />
+          </div>
+        </div>
+      </section>
+
       {/* Vent Types Section */}
       <section className="section-padding">
         <div className="container">
