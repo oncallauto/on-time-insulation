@@ -120,11 +120,11 @@ export default function Services() {
                 </div>
                 <div className={`bg-muted/50 rounded-lg overflow-hidden h-64 flex items-center justify-center ${idx % 2 === 1 ? "md:order-1" : ""}`}>
                   <img src={[
-                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-removal-ahb8UQxcQYtcVyXFNNxg69.webp',
-                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-installation-aZsKbTJhBmFKBwyvmvDpTM.webp',
-                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-roof-vents-g7jHiHEb8hmneVFV2er5ko.webp',
-                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-roof-vents-g7jHiHEb8hmneVFV2er5ko.webp',
-                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-installation-aZsKbTJhBmFKBwyvmvDpTM.webp'
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-removal-branded-eHMWkxZeprqYKS9xsF8DMy.webp',
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-installation-branded-XtfaNHWAYG4gHqwrszv2CS.webp',
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-roof-vents-branded-E8jBdqbgQAf9eK9EtqwLta.webp',
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-roof-vents-branded-E8jBdqbgQAf9eK9EtqwLta.webp',
+                    'https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/service-installation-branded-XtfaNHWAYG4gHqwrszv2CS.webp'
                   ][idx]} alt={category.title} className="w-full h-full object-cover" />
                 </div>
               </div>

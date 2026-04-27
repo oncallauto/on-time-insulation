@@ -62,18 +62,19 @@ export default function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="hero-section bg-gradient-to-r from-primary/10 to-accent/10 py-16 md:py-24">
-        <div className="container text-center max-w-3xl">
+      <section className="hero-section relative py-24 md:py-32 overflow-hidden" style={{backgroundImage: 'url(https://d2xsxph8kpxj0f.cloudfront.net/310519663571735821/e7aU99kLXTtjVvJ4ZuTxaQ/hero-bg-professional-kmodUQxU22EBBRxUzHh32W.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundAttachment: 'fixed'}}>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="container text-center max-w-3xl relative z-10">
           <div className="mb-6 inline-block">
             <span className="trust-badge">
               <Shield size={16} />
               Trusted by Brisbane Homeowners
             </span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg">
             Professional Insulation Removal & Installation in Brisbane
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto drop-shadow">
             Safe, clean, energy-efficient solutions for homes and businesses. On Time, Every Time.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
