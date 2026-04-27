@@ -1,100 +1,64 @@
-import { useEffect, useRef } from "react";
+import { MapPin } from "lucide-react";
 
 export default function ServiceAreaMap() {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<google.maps.Map | null>(null);
-
-  useEffect(() => {
-    if (!mapContainer.current) return;
-
-    // Brisbane city center coordinates
-    const brisbaneCenter = { lat: -27.4698, lng: 153.0251 };
-
-    // Initialize map
-    map.current = new google.maps.Map(mapContainer.current, {
-      zoom: 11,
-      center: brisbaneCenter,
-      styles: [
-        {
-          featureType: "all",
-          elementType: "labels.text.fill",
-          stylers: [{ color: "#3d5a80" }],
-        },
-        {
-          featureType: "water",
-          elementType: "geometry.fill",
-          stylers: [{ color: "#d5e8f7" }],
-        },
-        {
-          featureType: "road",
-          elementType: "geometry.fill",
-          stylers: [{ color: "#ffffff" }],
-        },
-      ],
-    });
-
-    // Add main marker for Brisbane
-    new google.maps.Marker({
-      position: brisbaneCenter,
-      map: map.current,
-      title: "On Time Insulation - Brisbane",
-      icon: {
-        path: google.maps.SymbolPath.CIRCLE,
-        scale: 8,
-        fillColor: "#0066cc",
-        fillOpacity: 1,
-        strokeColor: "#ffffff",
-        strokeWeight: 2,
-      },
-    });
-
-    // Add service area circle
-    new google.maps.Circle({
-      center: brisbaneCenter,
-      radius: 25000, // 25km radius
-      map: map.current,
-      fillColor: "#0066cc",
-      fillOpacity: 0.1,
-      strokeColor: "#0066cc",
-      strokeOpacity: 0.3,
-      strokeWeight: 2,
-    });
-
-    // Add service area markers
-    const serviceAreas = [
-      { lat: -27.4629, lng: 153.0088, label: "CBD" },
-      { lat: -27.4898, lng: 153.0251, label: "South Brisbane" },
-      { lat: -27.4298, lng: 153.0251, label: "North Brisbane" },
-      { lat: -27.4698, lng: 152.9951, label: "West" },
-      { lat: -27.4698, lng: 153.0551, label: "East" },
-    ];
-
-    serviceAreas.forEach((area) => {
-      new google.maps.Marker({
-        position: { lat: area.lat, lng: area.lng },
-        map: map.current,
-        title: area.label,
-        icon: {
-          path: google.maps.SymbolPath.CIRCLE,
-          scale: 6,
-          fillColor: "#4da6ff",
-          fillOpacity: 0.7,
-          strokeColor: "#ffffff",
-          strokeWeight: 1,
-        },
-      });
-    });
-  }, []);
+  const serviceAreas = [
+    { name: "Brisbane CBD", suburb: "Brisbane" },
+    { name: "Inner West", suburb: "Paddington, Toowong, Auchenflower" },
+    { name: "Southside", suburb: "Kangaroo Point, South Bank, Dutton Park" },
+    { name: "North Brisbane", suburb: "Fortitude Valley, New Farm, Teneriffe" },
+    { name: "Eastern Suburbs", suburb: "Bulimba, Balmoral, Hawthorne" },
+  ];
 
   return (
-    <div className="space-y-4">
-      <div
-        ref={mapContainer}
-        className="w-full h-96 rounded-lg border border-border shadow-sm"
-      />
-      <p className="text-sm text-muted-foreground text-center">
-        We service Brisbane and surrounding areas within a 25km radius
-      </p>
+    <div className="space-y-6">
+      {/* Service Area Display */}
+      <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-lg border border-border p-8">
+        <div className="mb-6">
+          <h3 className="text-2xl font-bold text-foreground mb-2">Brisbane Service Coverage</h3>
+          <p className="text-muted-foreground">
+            We proudly serve Brisbane and surrounding areas within a 25km radius from the CBD.
+          </p>
+        </div>
+
+        {/* Service Areas Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {serviceAreas.map((area, idx) => (
+            <div key={idx} className="flex items-start gap-3 p-4 bg-background rounded-lg border border-border/50">
+              <MapPin size={20} className="text-primary flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="font-semibold text-foreground">{area.name}</h4>
+                <p className="text-sm text-muted-foreground">{area.suburb}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Additional Coverage Info */}
+        <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
+          <p className="text-sm text-foreground">
+            <span className="font-semibold">Not listed above?</span> Contact us to check if we service your area. We frequently expand our coverage to meet demand.
+          </p>
+        </div>
+      </div>
+
+      {/* Service Hours */}
+      <div className="bg-background border border-border rounded-lg p-6">
+        <h3 className="text-lg font-bold text-foreground mb-4">Service Hours & Response Time</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <p className="text-sm font-semibold text-muted-foreground">Standard Service Hours</p>
+            <p className="text-foreground">Monday - Friday: 7:00 AM - 5:00 PM</p>
+            <p className="text-foreground">Saturday: 8:00 AM - 2:00 PM</p>
+            <p className="text-foreground">Sunday: Closed</p>
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-muted-foreground">Emergency Response</p>
+            <p className="text-foreground">24/7 Emergency Contact Available</p>
+            <p className="text-foreground">Response Time: Within 24-48 hours</p>
+            <p className="text-foreground">Same-day quotes for urgent requests</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
