@@ -21,10 +21,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install --legacy-peer-deps     
-      - run: npm run build
+      - run: npm install -g pnpm
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm run build
+        working-directory: client
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./client/dist
       - uses: actions/deploy-pages@v4
         id: deployment
