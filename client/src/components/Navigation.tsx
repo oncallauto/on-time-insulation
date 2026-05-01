@@ -20,10 +20,10 @@ export default function Navigation() {
 
   return (
     <nav className="sticky-header">
-      <div className="container flex items-center justify-between py-4">
+      <div className="container flex items-center justify-between py-2">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 no-underline">
-          <img src="/logooti.PNG" alt="On Time Insulation" className="h-24 w-auto" />
+          <img src="/logooti.PNG" alt="On Time Insulation" className="h-20 w-auto" />
           <div className="hidden sm:block">
             <p className="font-bold text-foreground text-sm">On Time Insulation</p>
             <p className="text-xs text-muted-foreground">Brisbane, Australia</p>
