@@ -153,13 +153,13 @@ export default function Contact() {
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-2">Phone *</label>
                   <input
-                    type="tel"
+                    type="text"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 border border-border rounded-lg focus-ring bg-background"
-                    placeholder="(07) 0000 0000"
+                    placeholder="e.g. 0424 747 332"
                   />
                 </div>
               </div>
@@ -353,7 +353,7 @@ export default function Contact() {
           <p className="text-lg mb-8 text-primary-foreground/90">
             Scroll up to submit your quote request or call us directly.
           </p>
-          <a href="tel:+61733333333" className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-muted transition-colors">
+          <a href="tel:+61487720783" className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-muted transition-colors">
             Call Now
           </a>
         </div>
